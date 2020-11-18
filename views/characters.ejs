@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <section>Home</section>
+        <section>My Characters</section>
+    </header>
+    <div>
+        <%result.forEach(element => {%>
+            <p><%=element.name%></p>
+            <p><%=element.house%></p>
+
+            <form action="/my-characters " method="POST">
+            <input type="hidden" name="name" id=""values="<%=element.name%>">
+            <input type="hidden" name="house" id=""values="<%=element.house%>">
+
+            <button type="submit"> Add to fav</button>
+            </form>
+
+            <p>-------------------------------------</p>
+
+       <% })%>
+    </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <%result.forEach(element => {%>
+        <p><%=element.name%></p>
+        <p><%=element.patronus%></p>
+
+ <form action="/character/<%=result.id%>?_method=PUT " method="POST">
+        <input type="text" name="character Name" id=""values="<%=result.name%>">
+        <input type="text" name="character patronus" id=""values="<%=result.patronus%>">
+        <button type="update">Update</button>
+
+        <select name="Char" id="">
+            <option value="">Alive</option>
+            <option value="">Died</option>
+        </select>
+
+        </form>
+        <form action="/character/<%=result.id%>?_method=DELETE " method="POST">
+        <button type="submit"> Delete</button>
+    </form>
+    
+
+
+   <% })%>
+   
+        
+
+          
+</body>
+</html>
